@@ -17,7 +17,7 @@ export const validateRequestBody = (schema: ZodObject<any>) => {
         } catch (error) {
             // If the validation fails, 
 
-            return res.status(400).json({
+          res.status(400).json({
                 message: "Invalid request body",
                 success: false,
                 error: error
@@ -38,7 +38,7 @@ export const validateQueryParams = (schema: ZodObject<any>) => {
         } catch (error) {
             // If the validation fails, 
 
-            return res.status(400).json({
+          res.status(400).json({
                 message: "Invalid query params",
                 success: false,
                 error: error
